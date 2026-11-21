@@ -316,7 +316,7 @@ The pattern for the config entry for `exit_codes` has to be changed as well:
     +* Wrapper around printf. Everything, that gets printed with this gets
     +* prefixed with 'TORTILLAS EXPECT: '.
     +**/
-    +#define tortillas_expect(FMT, ...) printf("TORTILLAS EXPECT: " FMT, __VA_ARGS__);
+    +#define tortillas_expect(FMT, ...) printf("TORTILLAS EXPECT: " FMT __VA_OPT__(,) __VA_ARGS__);
     ```
     ### Config entry
 
